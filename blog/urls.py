@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main.views import IndexView
+from main.views import AboutView, IndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='index'),
+    path('about/', AboutView.as_view(), name='about'),
 ]

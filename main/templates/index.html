@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block site_title_page %}{% endblock %}
+{% block page_content_title %}Welcome to {{ SITE_TITLE }}!{% endblock %}
+
+{% block page_content %}
+<ul>
+    {% for bp in blogposts %}
+        <li>{{ bp.title }} - {{ bp.text }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
